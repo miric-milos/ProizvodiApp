@@ -103,6 +103,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005061748578_InitialCreate.cs" />
+    <Compile Include="Migrations\202005061748578_InitialCreate.designer.cs">
+      <DependentUpon>202005061748578_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Infrastructure\ProizvodiContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -126,6 +131,11 @@
       <Project>{15f13670-dcad-499f-b83b-9c9e95b5383b}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005061748578_InitialCreate.resx">
+      <DependentUpon>202005061748578_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
