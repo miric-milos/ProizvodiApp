@@ -1,0 +1,39 @@
+﻿
+@model ASPProizvodiApp.Models.ViewModels.ProizvodViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dodaj proizvod</title>
+</head>
+<body>
+
+    <h1>Dodaj proizvod</h1>
+    <br /><hr />
+
+    <form action="/dodaj" method="post">
+        <label for="Naziv">Naziv</label>
+        @Html.TextBoxFor(m => m.Naziv)
+        <br /><br />
+        <label for="Opis">Opis</label>
+        @Html.TextBoxFor(m => m.Opis)
+        <br /><br />
+        <label for="Kategorija">Kategorija</label>
+        @Html.TextBoxFor(m => m.Kategorija)
+        <br /><br />
+        <label for="Proizvodjac">Proizvodjac</label>
+        @Html.TextBoxFor(m => m.Proizvodjac)
+        <br /><br />
+        <label for="Cena">Cena</label>
+        @Html.TextBoxFor(m => m.Cena, new { @type = "number" })
+
+    </form>
+
+</body>
+</html>
