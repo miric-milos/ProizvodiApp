@@ -8,6 +8,6 @@ namespace ASPProizvodiApp.Models.Infrastructure
 {
     public class ProizvodiContext : DbContext
     {
-        public DbSet<Domain.Proizvod> MyProperty { get; set; }
+        public DbSet<Domain.Proizvod> Proizvodi { get; set; }
     }
 }

@@ -5,11 +5,11 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Models.Infrastructure.ProizvodiContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ASPProizvodiApp.Models.Infrastructure.ProizvodiContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(ASPProizvodiApp.Models.Infrastructure.ProizvodiContext context)

@@ -104,12 +104,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005061748578_InitialCreate.cs" />
-    <Compile Include="Migrations\202005061748578_InitialCreate.designer.cs">
-      <DependentUpon>202005061748578_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202005061908118_InitialCreate.cs" />
+    <Compile Include="Migrations\202005061908118_InitialCreate.designer.cs">
+      <DependentUpon>202005061908118_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Infrastructure\ProizvodiContext.cs" />
+    <Compile Include="Models\Infrastructure\ProizvodManager.cs" />
     <Compile Include="Models\ViewModels\ProizvodViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -135,8 +136,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005061748578_InitialCreate.resx">
-      <DependentUpon>202005061748578_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202005061908118_InitialCreate.resx">
+      <DependentUpon>202005061908118_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

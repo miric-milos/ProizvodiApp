@@ -25,7 +25,7 @@
         
         public override void Down()
         {
-            DropTable("dbo.ProizvodI");
+            DropTable("dbo.Proizvodi");
         }
     }
 }

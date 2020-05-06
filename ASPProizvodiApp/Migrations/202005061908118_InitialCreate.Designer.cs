@@ -13,7 +13,7 @@ namespace ASPProizvodiApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202005061748578_InitialCreate"; }
+            get { return "202005061908118_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
