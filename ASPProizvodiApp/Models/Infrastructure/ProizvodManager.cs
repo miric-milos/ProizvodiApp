@@ -9,6 +9,17 @@ namespace ASPProizvodiApp.Models.Infrastructure
 {
     public static class ProizvodManager
     {
+        public static List<Proizvod> SviProizvodi()
+        {
+            var db = new ProizvodiContext();
+            var proizvodi = db.Proizvodi.ToList();
+
+            // Oslobodi memoriju
+            db.Dispose();
+
+            return proizvodi;
+        }
+
         public async static Task<bool> DodajProizvodAsync(Proizvod proizvod)
         {
             using (var db = new ProizvodiContext())

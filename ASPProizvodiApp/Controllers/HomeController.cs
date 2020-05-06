@@ -13,10 +13,10 @@ namespace ASPProizvodiApp.Controllers
     [RoutePrefix(prefix: "")]
     public class HomeController : Controller
     {
-        // [Route(template: "")]
         public ActionResult Index()
         {
-            return View();
+            var model = ProizvodManager.SviProizvodi();
+            return View(model);
         }
 
         [Route(template: "dodaj")]
@@ -47,6 +47,7 @@ namespace ASPProizvodiApp.Controllers
                     return Redirect(url: "/");
                 }
             }
+            // Model nije u redu
             ModelState.AddModelError("", "Doslo je do greske pri dodavanju proizvoda, pokusajte ponovo");
             return View(model);
         }
