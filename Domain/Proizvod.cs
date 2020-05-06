@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    class Proizvod
-    {
+    public class Proizvod
+    {        
+        public int Id { get; set; }
+        public string Naziv { get; set; }
+        public string Opis { get; set; }
+        public string  Kategorija { get; set; }
+        public string Proizvodjac { get; set; }
+        public string Dobavljac { get; set; }
+        public decimal Cena { get; set; }
     }
 }
