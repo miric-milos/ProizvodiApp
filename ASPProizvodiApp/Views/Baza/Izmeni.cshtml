@@ -1,6 +1,7 @@
 ﻿
 @model ASPProizvodiApp.Models.ViewModels.ProizvodViewModel
 
+
 @{
     Layout = null;
 }
@@ -10,19 +11,18 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Dodaj proizvod</title>
+    <title>Izmeni</title>
 </head>
 <body>
-
-    <h1>Dodaj proizvod</h1>
+    <h2>Izmeni @Model.Naziv</h2>
     <a href="/">Pocetna</a>
-    <br /><hr />
+    <hr /><br />
 
     <section id="validacija">
         @Html.ValidationSummary()
     </section>
 
-    <form action="/db/dodaj" method="post">
+    <form action="/db/proizvodi/izmeni" method="post">
 
         @Html.AntiForgeryToken()
 
@@ -44,8 +44,8 @@
         <label for="Cena">Cena</label><br />
         @Html.TextBoxFor(m => m.Cena, new { @type = "number" })
 
-        <hr />
-        <button type="submit">Dodaj proizvod</button>
+        <br /><br />
+        <button type="submit">Sacuvaj izmene</button>
 
     </form>
 

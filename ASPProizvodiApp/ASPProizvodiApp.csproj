@@ -124,6 +124,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Baza\Index.cshtml" />
     <Content Include="Views\Baza\Dodaj.cshtml" />
+    <Content Include="Views\Shared\Greska.cshtml" />
+    <Content Include="Views\Baza\Izmeni.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

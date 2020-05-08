@@ -15,6 +15,7 @@
 </head>
 <body>
     <h1>Lista proizvoda</h1>
+    <a href="/">Pocetna</a>
     <hr /><br />
     <link href="~/Content/" />
     <section id="proizvodi">
@@ -46,7 +47,7 @@
                             <td>@p.Proizvodjac</td>
                             <td>@p.Dobavljac</td>
                             <td>@p.Cena</td>
-                            <td><a href="/proizvodi/@p.Id">Izmeni</a></td>
+                            <td><a href="/db/proizvodi/@p.Id">Izmeni</a></td>
                         </tr>
                     }
                 }
