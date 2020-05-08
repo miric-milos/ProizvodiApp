@@ -1,0 +1,59 @@
+﻿
+@model IEnumerable<Domain.Proizvod>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Lista proizvoda</h1>
+        <br /><hr />
+              <link href="~/Content/"/>
+        <section id="proizvodi">
+            <table border="1px solid black">
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Opis</th>
+                        <th>Kategorija</th>
+                        <th>Proizvodjac</th>
+                        <th>Dobavljac</th>
+                        <th>Cena</th>
+                        <th>Akcija</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count() == 0)
+                    {
+                        <tr><td colspan="7">Ne postoji nijedan proizvod.</td></tr>
+                    }
+                    else
+                    {
+                        foreach (var p in Model)
+                        {
+                            <tr>
+                                <td>@p.Naziv</td>
+                                <td>@p.Opis</td>
+                                <td>@p.Kategorija</td>
+                                <td>@p.Proizvodjac</td>
+                                <td>@p.Dobavljac</td>
+                                <td>@p.Cena</td>
+                                <td><a href="/proizvodi/@p.Id">Izmeni</a></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </section>
+        <br /><br />
+        <a href="/db/dodaj">Dodaj nov proizvod</a>
+</body>
+</html>

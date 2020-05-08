@@ -9,12 +9,12 @@ namespace ASPProizvodiApp.Models.Infrastructure
 {
     public static class ProizvodManager
     {
-        public static List<Proizvod> SviProizvodi()
+        public static IEnumerable<Proizvod> SviProizvodi()
         {
             var db = new ProizvodiContext();
             var proizvodi = db.Proizvodi.ToList();
 
-            // Oslobodi memoriju
+            // Oslobodi resurse
             db.Dispose();
 
             return proizvodi;
@@ -29,10 +29,10 @@ namespace ASPProizvodiApp.Models.Infrastructure
                     db.Proizvodi.Add(proizvod);
                     await db.SaveChangesAsync();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     // Ako se desi greska odkomentarisi
-                    // throw ex;
+                    // throw;
                     return false;
                 }
             }

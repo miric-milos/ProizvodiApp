@@ -15,41 +15,7 @@ namespace ASPProizvodiApp.Controllers
     {
         public ActionResult Index()
         {
-            var model = ProizvodManager.SviProizvodi();
-            return View(model);
-        }
-
-        [Route(template: "dodaj")]
-        public ViewResult Dodaj()
-        {
             return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Route(template: "dodaj")]
-        public async Task<ActionResult> Dodaj(ProizvodViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var proizvod = new Proizvod
-                {
-                    Naziv = model.Naziv,
-                    Kategorija = model.Kategorija,
-                    Opis = model.Opis,
-                    Proizvodjac = model.Proizvodjac,
-                    Dobavljac = model.Dobavljac,
-                    Cena = model.Cena
-                };
-
-                if (await ProizvodManager.DodajProizvodAsync(proizvod))
-                {
-                    return Redirect(url: "/");
-                }
-            }
-            // Model nije u redu
-            ModelState.AddModelError("", "Doslo je do greske pri dodavanju proizvoda, pokusajte ponovo");
-            return View(model);
         }
     }
 }

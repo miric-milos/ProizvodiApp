@@ -25,6 +25,7 @@ namespace ASPProizvodiApp.Models.ViewModels
 
         [DataType(DataType.Currency)]
         [Required(ErrorMessage = "Cena je obavezna!")]
+        [Range(1, int.MaxValue, ErrorMessage = "Cena ne sme biti negativna!")]
         public decimal Cena { get; set; }
     }
 }
