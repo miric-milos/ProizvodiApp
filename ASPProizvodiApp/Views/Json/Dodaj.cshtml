@@ -1,0 +1,53 @@
+﻿
+@model ASPProizvodiApp.Models.ViewModels.ProizvodViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dodaj proizvod [JSON]</title>
+</head>
+<body>
+
+    <h1>Dodaj proizvod u JSON datoteku</h1>
+    <a href="/">Pocetna</a>
+    <br /><hr />
+
+    <section id="validacija">
+        @Html.ValidationSummary()
+    </section>
+
+    <form action="/api/dodaj" method="post">
+
+        @Html.AntiForgeryToken()
+
+        <label for="Naziv">Naziv</label><br />
+        @Html.TextBoxFor(m => m.Naziv)
+        <br /><br />
+        <label for="Opis">Opis</label><br />
+        @Html.TextBoxFor(m => m.Opis)
+        <br /><br />
+        <label for="Kategorija">Kategorija</label><br />
+        @Html.TextBoxFor(m => m.Kategorija)
+        <br /><br />
+        <label for="Proizvodjac">Proizvodjac</label><br />
+        @Html.TextBoxFor(m => m.Proizvodjac)
+        <br /><br />
+        <label for="Dobavljac">Dobavljac</label><br />
+        @Html.TextBoxFor(m => m.Dobavljac)
+        <br /><br />
+        <label for="Cena">Cena</label><br />
+        @Html.TextBoxFor(m => m.Cena, new { @type = "number" })
+
+        <hr />
+        <button type="submit">Dodaj proizvod</button>
+
+    </form>
+
+</body>
+</html>

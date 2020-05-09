@@ -1,7 +1,6 @@
 ﻿
 @model IEnumerable<Domain.Proizvod>
 
-
 @{
     Layout = null;
 }
@@ -11,10 +10,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Lista proizvoda iz JSON datoteke</title>
 </head>
 <body>
-    <h1>Lista proizvoda iz baze</h1>
+    <h1>Lista proizvoda iz JSON datoteke</h1>
     <a href="/">Pocetna</a>
     <hr /><br />
     <section id="proizvodi">
@@ -46,7 +45,7 @@
                             <td>@p.Proizvodjac</td>
                             <td>@p.Dobavljac</td>
                             <td>@p.Cena</td>
-                            <td><a href="/db/proizvodi/@p.Id">Izmeni</a></td>
+                            <td><a href="/api/proizvodi/@p.Id">Izmeni</a></td>
                         </tr>
                     }
                 }
@@ -54,6 +53,7 @@
         </table>
     </section>
     <br /><br />
-    <a href="/db/dodaj">Dodaj nov proizvod</a>
+    <a href="/api/dodaj">Dodaj nov proizvod</a>
+
 </body>
 </html>

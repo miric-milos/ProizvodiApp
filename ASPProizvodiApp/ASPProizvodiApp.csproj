@@ -105,6 +105,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BazaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JsonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -113,6 +114,7 @@
       <DependentUpon>202005081124434_InitalCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Infrastructure\JsonProizvodiManager.cs" />
     <Compile Include="Models\Infrastructure\ProizvodiContext.cs" />
     <Compile Include="Models\Infrastructure\ProizvodManager.cs" />
     <Compile Include="Models\ViewModels\ProizvodViewModel.cs" />
@@ -126,6 +128,8 @@
     <Content Include="Views\Baza\Dodaj.cshtml" />
     <Content Include="Views\Shared\Greska.cshtml" />
     <Content Include="Views\Baza\Izmeni.cshtml" />
+    <Content Include="Views\Json\Index.cshtml" />
+    <Content Include="Views\Json\Dodaj.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
