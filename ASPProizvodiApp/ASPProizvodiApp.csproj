@@ -130,6 +130,7 @@
     <Content Include="Views\Baza\Izmeni.cshtml" />
     <Content Include="Views\Json\Index.cshtml" />
     <Content Include="Views\Json\Dodaj.cshtml" />
+    <Content Include="Views\Json\Izmeni.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
